@@ -4,14 +4,16 @@ html {
 }
 
 .header {
-/* background-image: url('images/header.jpg'); */
+background-image: url('images/header.jpg');
 color: #e63a3a;
 padding: 15px;
 height: 190px; 
 }
 .header img {
-    width: 1600px;
-    height: 90;
+    /* width: 1600px;
+    height: 90; */
+    width: 100%;
+    height: auto;
 }
 
 /*Menu dropdown*/
@@ -40,6 +42,9 @@ text-decoration: none;
     clear: both;
     display: table;
 }
+
+  
+
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
 .col-3 {width: 25%;}
@@ -56,4 +61,12 @@ text-decoration: none;
 [class*="col-"] {
     float: left;
     padding: 15px;
-  }
+    box-sizing: border-box;
+}
+.top-fashion img {
+    height: 400px;
+}
+.shoes img{
+    height: 200px;
+    width: 200px;
+}
