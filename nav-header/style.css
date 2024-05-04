@@ -42,6 +42,25 @@ text-decoration: none;
     clear: both;
     display: table;
 }
+.card{
+    transition: 0.3s;
+    width: 80%;
+    border-radius: 5px;
+}
+.card_text{
+    padding: 2px 16px;
+}
+
+.border_radius{
+    border-radius: 50%;
+    background-color: pink;
+    padding: 20px;
+    width: 80%;
+}
+.border_radius:hover{
+    background-color: aqua;
+}
+
 
   
 

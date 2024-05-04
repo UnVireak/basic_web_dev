@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="./style_carucel.css">
     <title>Document</title>
 </head>
 <body>
@@ -36,12 +37,48 @@
 
     <div class="row">
         <div class="col-6">
+
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 3</div>
+                  <img src="../images_fashioin/images/product (2).jpg" style="width:100%">
+                  <div class="text">Caption Text</div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">2 / 3</div>
+                  <img src="../images_fashioin/images/product (3).jpg" style="width:100%">
+                  <div class="text">Caption Two</div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">3 / 3</div>
+                  <img src="../images_fashioin/images/product (26).jpg" style="width:100%">
+                  <div class="text">Caption Three</div>
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                
+                </div>
+                <br>
+                
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span> 
+                </div>
+        
+        </div>
+
+        <div class="col-3">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, harum est fuga tempora ab debitis ipsam incidunt impedit! Beatae blanditiis facilis saepe perferendis illo assumenda quisquam eveniet voluptatem cupiditate molestiae.
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus fugiat minima quia illum nulla quas, illo corporis aliquam quod eos veniam rerum sequi quibusdam hic necessitatibus vitae architecto explicabo quo?
             </p>
         </div>
 
-        <div class="col-6">
+        <div class="col3">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, harum est fuga tempora ab debitis ipsam incidunt impedit! Beatae blanditiis facilis saepe perferendis illo assumenda quisquam eveniet voluptatem cupiditate molestiae.
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus fugiat minima quia illum nulla quas, illo corporis aliquam quod eos veniam rerum sequi quibusdam hic necessitatibus vitae architecto explicabo quo?
             </p>
@@ -51,17 +88,33 @@
    <h3> Top fashion</h3>
 
    <div class="top-fashion">
+
    <div class="row">
     <div class="col-4">
-        <img src="../images_fashioin/images/product (23).jpg" alt="">
+        <div class="card">
+            <img class="border_radius" src="../images_fashioin/images/product (23).jpg" alt="">
+        </div>
+
+        <div class=" card_text"> Lorem ipsum dolor sit amet, consectetur adipisic</div>
+       
     </div>
 
     <div class="col-4">
-        <img src="../images_fashioin/images/product (24).jpg" alt="">
+        <div class="card">
+            <img class="border_radius" src="../images_fashioin/images/product (24).jpg" alt="">
+        </div>
+
+        <div class=" card_text"> Lorem ipsum dolor sit amet, consectetur adipisic</div>
+     
     </div>
 
     <div class="col-4">
-        <img src="../images_fashioin/images/Top (1).jpg" alt="">
+        <div class="card">
+            <img class="border_radius" src="../images_fashioin/images/Top (1).jpg" alt="">
+        </div>
+
+        <div class=" card_text"> Lorem ipsum dolor sit amet, consectetur adipisic</div>
+     
     </div>
    </div>
 </div>
@@ -85,5 +138,35 @@
     </div>
 </div>
 </div>
+
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+    
 </body>
 </html>
